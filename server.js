@@ -42,10 +42,9 @@ app.use(express.urlencoded({
 
 
 app.use(cors({
-  origin: 'https://serpomar-cliente-web.vercel.app', 
-  methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'], 
-  credentials: true  
+    origin: '*', // o la URL específica de tu aplicación web
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 app.use(passport.initialize());
